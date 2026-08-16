@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criação de Sites para Pequenas e Médias Empresas | Marlon Domingos</title>
+<meta name="description" content="Sites profissionais, modernos e otimizados para SEO a partir de R$500. Ideal para pequenas e médias empresas que querem vender mais na internet. Orçamento rápido pelo WhatsApp.">
+<meta name="keywords" content="criação de sites, site para pequena empresa, site profissional barato, site otimizado para google, desenvolvedor de sites, landing page para empresa">
+<meta name="author" content="Marlon Domingos">
+<link rel="canonical" href="https://marlondcury.github.io/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Criação de Sites para Pequenas e Médias Empresas | Marlon Domingos">
+<meta property="og:description" content="Sites profissionais, modernos e otimizados para SEO a partir de R$500. Veja exemplos reais e peça seu orçamento.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Marlon Domingos — Criação de Sites">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Criação de Sites para Pequenas e Médias Empresas">
+<meta name="twitter:description" content="Sites profissionais a partir de R$500, prontos em poucos dias e otimizados para aparecer no Google.">
+
+<meta name="robots" content="index, follow">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Marlon Domingos — Criação de Sites",
+  "url": "https://marlondcury.github.io/",
+  "description": "Criação de sites profissionais para pequenas e médias empresas, com foco em SEO e conversão.",
+  "priceRange": "R$500 - R$1000",
+  "areaServed": "BR",
+  "makesOffer": [
+    {"@type": "Offer", "name": "Landing Page", "price": "500", "priceCurrency": "BRL"},
+    {"@type": "Offer", "name": "Site Institucional", "price": "800", "priceCurrency": "BRL"},
+    {"@type": "Offer", "name": "Site Institucional + SEO", "price": "1000", "priceCurrency": "BRL"}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0b0d12;
+    --bg-alt:#12151d;
+    --card:#171a23;
+    --border:#242836;
+    --text:#eef0f4;
+    --text-dim:#a3a9b8;
+    --accent:#5b8cff;
+    --accent-2:#7cf5c4;
+    --gradient: linear-gradient(135deg, #5b8cff 0%, #7cf5c4 100%);
+    --radius:16px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  h1,h2,h3{line-height:1.15;letter-spacing:-0.02em;}
+  h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px;}
+  .eyebrow{
+    color:var(--accent-2);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-bottom:12px;
+  }
+  .lead{color:var(--text-dim);font-size:18px;max-width:620px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,13,18,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  header .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+  }
+  .logo{font-weight:800;font-size:18px;letter-spacing:-0.02em;}
+  .logo span{color:var(--accent-2);}
+  nav ul{display:flex;gap:32px;list-style:none;}
+  nav a{font-size:14px;color:var(--text-dim);transition:color .2s;}
+  nav a:hover{color:var(--text);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 24px;border-radius:999px;
+    font-weight:600;font-size:14px;
+    background:var(--gradient);
+    color:#0b0d12;
+    border:none;cursor:pointer;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(91,140,255,0.35);}
+  .btn-outline{
+    background:transparent;border:1px solid var(--border);color:var(--text);
+  }
+  .btn-outline:hover{border-color:var(--accent);box-shadow:none;transform:none;}
+  .header-cta{display:none;}
+  @media(min-width:860px){.header-cta{display:inline-flex;}}
+
+  /* Hero */
+  .hero{
+    padding:120px 0 80px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;top:-200px;right:-200px;
+    width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,rgba(91,140,255,0.18),transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+  }
+  @media(min-width:960px){.hero-grid{grid-template-columns:1.1fr 0.9fr;}}
+  .hero h1{
+    font-size:clamp(34px,5.5vw,56px);
+    margin-bottom:20px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:var(--gradient);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero p.lead{margin-bottom:32px;font-size:19px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px;}
+  .trust-row{display:flex;flex-wrap:wrap;gap:24px;color:var(--text-dim);font-size:14px;}
+  .trust-row div{display:flex;align-items:center;gap:8px;}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);}
+
+  /* Mock browser card for hero */
+  .browser-mock{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,0.45);
+    transform:rotate(1.5deg);
+  }
+  .browser-bar{
+    display:flex;align-items:center;gap:6px;padding:12px 16px;background:var(--bg-alt);border-bottom:1px solid var(--border);
+  }
+  .browser-bar span{width:10px;height:10px;border-radius:50%;background:#3a3f4d;}
+  .browser-bar .url-chip{
+    margin-left:14px;font-size:11px;color:var(--text-dim);
+    background:rgba(255,255,255,0.04);border:1px solid var(--border);
+    padding:4px 12px;border-radius:999px;flex:1;max-width:220px;
+  }
+  .browser-body{padding:0;background:linear-gradient(180deg,#151824,#0f1219);}
+  .mock-nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;border-bottom:1px solid var(--border);
+  }
+  .mock-nav .mock-logo{
+    width:24px;height:24px;border-radius:7px;background:var(--gradient);
+  }
+  .mock-nav .mock-links{display:flex;gap:14px;}
+  .mock-nav .mock-links span{width:34px;height:7px;border-radius:4px;background:var(--border);}
+  .mock-nav .mock-cta{
+    width:64px;height:22px;border-radius:999px;background:var(--gradient);opacity:0.9;
+  }
+  .mock-hero{padding:28px 24px 24px;}
+  .browser-body .bar{height:12px;border-radius:6px;background:var(--border);margin-bottom:10px;}
+  .browser-body .bar.w60{width:60%;}
+  .browser-body .bar.w40{width:40%;}
+  .browser-body .bar.w80{width:80%;}
+  .browser-body .bar.title{height:22px;width:78%;background:linear-gradient(90deg,#2a3040,#1c202c);}
+  .browser-body .cta-chip{
+    display:inline-block;margin-top:16px;padding:10px 20px;border-radius:999px;
+    background:var(--gradient);color:#0b0d12;font-weight:700;font-size:13px;
+  }
+  .mock-cards{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+    padding:0 24px 28px;
+  }
+  .mock-card{
+    background:rgba(255,255,255,0.03);border:1px solid var(--border);
+    border-radius:10px;padding:12px;
+  }
+  .mock-card .mock-icon{
+    width:20px;height:20px;border-radius:6px;background:rgba(124,245,196,0.18);margin-bottom:10px;
+  }
+  .mock-card span{display:block;height:7px;border-radius:4px;background:var(--border);margin-bottom:6px;}
+  .mock-card span:last-child{width:60%;margin-bottom:0;}
+
+  /* Portfolio */
+  .portfolio-grid{
+    display:grid;grid-template-columns:1fr;gap:28px;margin-top:48px;
+  }
+  @media(min-width:800px){.portfolio-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:1080px){.portfolio-grid{grid-template-columns:repeat(3,1fr);}}
+  .case-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    overflow:hidden;transition:transform .25s, border-color .25s;
+  }
+  .case-card:hover{transform:translateY(-6px);border-color:var(--accent);}
+  .case-preview{
+    height:180px;position:relative;display:flex;align-items:center;justify-content:center;
+    flex-direction:column;gap:10px;
+  }
+  .case-preview.law{background:linear-gradient(135deg,#1a1d2b,#2a2140);}
+  .case-preview.food{background:linear-gradient(135deg,#241a14,#3a2410);}
+  .case-preview.edu{background:linear-gradient(135deg,#12241f,#123a30);}
+  .case-preview .badge{
+    font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+    padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.2);
+    color:var(--text-dim);
+  }
+  .case-preview .fake-title{font-weight:800;font-size:22px;}
+  .case-body{padding:24px;}
+  .case-body h3{font-size:18px;margin-bottom:8px;}
+  .case-body p{color:var(--text-dim);font-size:14px;margin-bottom:16px;}
+  .case-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .case-tags span{
+    font-size:12px;background:var(--bg-alt);border:1px solid var(--border);
+    padding:4px 10px;border-radius:999px;color:var(--text-dim);
+  }
+  .case-link{font-size:14px;font-weight:600;color:var(--accent-2);display:inline-flex;align-items:center;gap:6px;}
+
+  /* Benefits */
+  .benefits-grid{
+    display:grid;grid-template-columns:1fr;gap:24px;margin-top:48px;
+  }
+  @media(min-width:700px){.benefits-grid{grid-template-columns:repeat(3,1fr);}}
+  .benefit{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:28px;
+  }
+  .benefit .icon{
+    width:44px;height:44px;border-radius:12px;background:var(--gradient);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .benefit .icon svg{width:22px;height:22px;}
+  .benefit h3{font-size:17px;margin-bottom:8px;}
+  .benefit p{color:var(--text-dim);font-size:14px;}
+
+  /* Process */
+  .process-list{
+    display:grid;grid-template-columns:1fr;gap:0;margin-top:48px;
+    border-top:1px solid var(--border);
+  }
+  @media(min-width:800px){.process-list{grid-template-columns:repeat(4,1fr);border-top:none;}}
+  .step{
+    padding:28px 20px;border-bottom:1px solid var(--border);position:relative;
+  }
+  @media(min-width:800px){.step{border-bottom:none;border-right:1px solid var(--border);}
+    .step:last-child{border-right:none;}}
+  .step .num{
+    font-size:13px;font-weight:800;color:var(--accent-2);margin-bottom:10px;
+  }
+  .step h3{font-size:16px;margin-bottom:6px;}
+  .step p{color:var(--text-dim);font-size:13px;}
+
+  /* Pricing */
+  .pricing-grid{
+    display:grid;grid-template-columns:1fr;gap:24px;margin-top:48px;
+  }
+  @media(min-width:860px){.pricing-grid{grid-template-columns:repeat(3,1fr);}}
+  .price-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:32px 28px;display:flex;flex-direction:column;
+  }
+  .price-card.featured{
+    border-color:var(--accent);
+    box-shadow:0 0 0 1px var(--accent), 0 20px 50px rgba(91,140,255,0.15);
+    position:relative;
+  }
+  .price-card.featured::before{
+    content:"MAIS ESCOLHIDO";
+    position:absolute;top:-13px;left:28px;
+    background:var(--gradient);color:#0b0d12;
+    font-size:11px;font-weight:800;letter-spacing:0.05em;
+    padding:5px 12px;border-radius:999px;
+  }
+  .price-card h3{font-size:18px;margin-bottom:6px;}
+  .price-card .price{font-size:38px;font-weight:800;margin:12px 0 4px;}
+  .price-card .price small{font-size:14px;font-weight:500;color:var(--text-dim);}
+  .price-card .desc{color:var(--text-dim);font-size:13px;margin-bottom:20px;}
+  .price-card ul{list-style:none;margin-bottom:28px;flex:1;}
+  .price-card li{
+    display:flex;gap:10px;font-size:14px;color:var(--text-dim);padding:7px 0;
+  }
+  .price-card li::before{content:"✓";color:var(--accent-2);font-weight:800;}
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin-top:40px;}
+  details{
+    border-bottom:1px solid var(--border);padding:20px 0;
+  }
+  summary{
+    cursor:pointer;font-weight:600;font-size:16px;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:22px;color:var(--accent-2);flex-shrink:0;}
+  details[open] summary::after{content:"–";}
+  details p{color:var(--text-dim);margin-top:12px;font-size:14px;}
+
+  /* CTA final */
+  .cta-final{
+    text-align:center;background:var(--card);border:1px solid var(--border);
+    border-radius:24px;padding:64px 32px;position:relative;overflow:hidden;
+  }
+  .cta-final::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 50% 0%,rgba(91,140,255,0.15),transparent 60%);
+  }
+  .cta-final h2{margin-bottom:16px;}
+  .cta-final p{color:var(--text-dim);max-width:520px;margin:0 auto 32px;}
+
+  footer{
+    border-top:1px solid var(--border);padding:40px 0;color:var(--text-dim);font-size:13px;
+  }
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;}
+
+  /* Floating WhatsApp */
+  .whatsapp-float{
+    position:fixed;bottom:24px;right:24px;z-index:60;
+    width:60px;height:60px;border-radius:50%;
+    background:#25D366;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px rgba(37,211,102,0.4);
+    transition:transform .2s;
+  }
+  .whatsapp-float:hover{transform:scale(1.08);}
+  .whatsapp-float svg{width:30px;height:30px;}
+
+  ::selection{background:var(--accent);color:#0b0d12;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Marlon <span>Domingos</span></div>
+    <nav>
+      <ul>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <a class="btn header-cta" href="https://wa.me/5533999744787?text=Oi%20Marlon!%20Quero%20um%20site%20para%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Criação de sites para PMEs</p>
+        <h1>Seu negócio precisa de um site que <em>vende</em>, não só que existe</h1>
+        <p class="lead">Sites profissionais, rápidos e otimizados para o Google, feitos sob medida para pequenas e médias empresas — a partir de <strong>R$500</strong>, prontos em poucos dias.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://wa.me/5533999744787?text=Oi%20Marlon!%20Quero%20um%20site%20para%20minha%20empresa." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
+          <a class="btn btn-outline" href="#portfolio">Ver sites que já fiz</a>
+        </div>
+        <div class="trust-row">
+          <div><span class="dot"></span> A partir de R$500</div>
+          <div><span class="dot"></span> Otimizado para SEO</div>
+          <div><span class="dot"></span> Entrega em poucos dias</div>
+        </div>
+      </div>
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <span></span><span></span><span></span>
+          <div class="url-chip">suaempresa.com.br</div>
+        </div>
+        <div class="browser-body">
+          <div class="mock-nav">
+            <div class="mock-logo"></div>
+            <div class="mock-links"><span></span><span></span><span></span></div>
+            <div class="mock-cta"></div>
+          </div>
+          <div class="mock-hero">
+            <div class="bar w40"></div>
+            <div class="bar title"></div>
+            <div class="bar w80"></div>
+            <div class="bar w60"></div>
+            <div class="cta-chip">Fale conosco →</div>
+          </div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-icon"></div>
+              <span></span><span></span>
+            </div>
+            <div class="mock-card">
+              <div class="mock-icon"></div>
+              <span></span><span></span>
+            </div>
+            <div class="mock-card">
+              <div class="mock-icon"></div>
+              <span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="wrap">
+      <p class="eyebrow">Portfólio</p>
+      <h2>Sites que já coloquei no ar</h2>
+      <p class="lead">Cada projeto é pensado para o ramo do cliente: identidade visual, textos e estrutura pensados para gerar contato e vendas.</p>
+
+      <div class="portfolio-grid">
+        <div class="case-card">
+          <div class="case-preview law">
+            <span class="badge">Advocacia</span>
+            <span class="fake-title">Godinho Advocacia</span>
+          </div>
+          <div class="case-body">
+            <h3>Godinho Advocacia e Assessoria Jurídica</h3>
+            <p>Site institucional para escritório de advocacia em Governador Valadares (MG), com SEO local para aparecer nas buscas da região.</p>
+            <div class="case-tags"><span>SEO Local</span><span>Institucional</span><span>Mobile-first</span></div>
+            <a class="case-link" href="https://marlondcury.github.io/godinho-landing/" target="_blank" rel="noopener">Ver site no ar →</a>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-preview food">
+            <span class="badge">Gastronomia</span>
+            <span class="fake-title">Taste Gastronomia</span>
+          </div>
+          <div class="case-body">
+            <h3>Taste Gastronomia</h3>
+            <p>Landing page para negócio de gastronomia, com cardápio em destaque, fotos do estabelecimento e botão direto para pedidos via WhatsApp.</p>
+            <div class="case-tags"><span>Cardápio digital</span><span>Landing Page</span><span>WhatsApp direto</span></div>
+            <span class="case-link" style="color:var(--text-dim);">Projeto de portfólio</span>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-preview edu">
+            <span class="badge">Institucional</span>
+            <span class="fake-title">CA-SI UFES</span>
+          </div>
+          <div class="case-body">
+            <h3>Centro Acadêmico de Sistemas de Informação (CA-SI UFES)</h3>
+            <p>Site institucional para o centro acadêmico do curso de Sistemas de Informação da UFES, com informações do centro, eventos e canais de contato.</p>
+            <div class="case-tags"><span>Institucional</span><span>Mobile-first</span><span>Acadêmico</span></div>
+            <a class="case-link" href="https://casiufesalegre.github.io/sitecasi/" target="_blank" rel="noopener">Ver site no ar →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="beneficios" style="background:var(--bg-alt);">
+    <div class="wrap">
+      <p class="eyebrow">Por que ter um site</p>
+      <h2>O que um site profissional faz pela sua empresa</h2>
+      <p class="lead">Muita gente ainda depende só de redes sociais. Um site é o que dá credibilidade e coloca sua empresa no Google.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Aparece no Google</h3>
+          <p>Estrutura otimizada para SEO, com textos, títulos e velocidade pensados para ranquear nas buscas locais.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></svg></div>
+          <h3>Funciona em qualquer tela</h3>
+          <p>Design responsivo, testado em celular, tablet e computador — a maioria dos seus clientes acessa pelo celular.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+          <h3>Gera contato direto</h3>
+          <p>Botões de WhatsApp e formulários posicionados para transformar visita em conversa e venda.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Rápido e leve</h3>
+          <p>Sites otimizados para carregar rápido — velocidade também é fator de ranqueamento no Google.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 2.5 2.5 0 0 0 1.7-4.3 1.8 1.8 0 0 1 1.3-3.1H17a3 3 0 0 0 3-3 9 9 0 0 0-8-9.6z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="10.5" cy="7" r="1"/><circle cx="15" cy="8" r="1"/></svg></div>
+          <h3>Identidade própria</h3>
+          <p>Nada de template genérico: cores, fontes e estrutura pensadas para a sua marca.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 1.5c1.5 0 2.5-.8 2.5-2s-1-1.7-2.5-2-2.5-.8-2.5-2 1-2 2.5-2a2.5 2.5 0 0 1 2.5 1.5"/><line x1="12" y1="6.5" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="17.5"/></svg></div>
+          <h3>Preço justo pra PME</h3>
+          <p>Pacotes pensados para o orçamento de pequenas e médias empresas, sem taxas escondidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="processo">
+    <div class="wrap">
+      <p class="eyebrow">Como funciona</p>
+      <h2>Do primeiro contato ao site no ar</h2>
+
+      <div class="process-list">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>Briefing rápido</h3>
+          <p>Conversamos pelo WhatsApp sobre seu negócio, objetivo e referências visuais.</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>Proposta e conteúdo</h3>
+          <p>Você me passa textos, fotos e informações — eu organizo tudo com foco em conversão.</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>Desenvolvimento</h3>
+          <p>Construo o site com design moderno, SEO e responsividade, e envio para sua aprovação.</p>
+        </div>
+        <div class="step">
+          <div class="num">04</div>
+          <h3>Publicação</h3>
+          <p>Ajustes finais, publicação no ar e orientações de como manter o site atualizado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="precos" style="background:var(--bg-alt);">
+    <div class="wrap">
+      <p class="eyebrow">Investimento</p>
+      <h2>Planos para todo tamanho de empresa</h2>
+      <p class="lead">Preços claros, sem mensalidade obrigatória. Você escolhe o pacote que faz sentido pro seu momento.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Landing Page</h3>
+          <p class="desc">Ideal para divulgar um produto, serviço ou evento específico.</p>
+          <div class="price">R$500 <small>à vista</small></div>
+          <ul>
+            <li>1 página otimizada para conversão</li>
+            <li>Design responsivo</li>
+            <li>Botão de WhatsApp</li>
+            <li>SEO básico</li>
+            <li>Entrega em até 5 dias úteis</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/5533999744787?text=Quero%20o%20plano%20Landing%20Page%20(R%24500)" target="_blank" rel="noopener">Escolher este plano</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Site Institucional</h3>
+          <p class="desc">Para empresas que querem presença completa: quem são, o que fazem, contato.</p>
+          <div class="price">R$800 <small>à vista</small></div>
+          <ul>
+            <li>Até 5 páginas (Home, Sobre, Serviços, Contato...)</li>
+            <li>Design responsivo e moderno</li>
+            <li>SEO on-page completo</li>
+            <li>Integração com WhatsApp e redes sociais</li>
+            <li>Entrega em até 10 dias úteis</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5533999744787?text=Quero%20o%20plano%20Site%20Institucional%20(R%24800)" target="_blank" rel="noopener">Escolher este plano</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Institucional + SEO</h3>
+          <p class="desc">Para quem quer investir pesado em aparecer no Google desde o início.</p>
+          <div class="price">R$1000 <small>à vista</small></div>
+          <ul>
+            <li>Tudo do plano Institucional</li>
+            <li>SEO avançado (palavras-chave, geo-tags)</li>
+            <li>Cadastro no Google Meu Negócio</li>
+            <li>Página de blog para conteúdo</li>
+            <li>Entrega em até 15 dias úteis</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/5533999744787?text=Quero%20o%20plano%20Institucional%20%2B%20SEO%20(R%241000)" target="_blank" rel="noopener">Escolher este plano</a>
+        </div>
+      </div>
+      <p style="margin-top:24px;color:var(--text-dim);font-size:13px;">* Hospedagem e domínio não inclusos — te oriento nas melhores opções de baixo custo para o seu caso.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <p class="eyebrow">Dúvidas frequentes</p>
+      <h2>Perguntas que recebo bastante</h2>
+
+      <div class="faq-list">
+        <details open>
+          <summary>Quanto tempo leva para ficar pronto?</summary>
+          <p>Depende do plano: landing pages ficam prontas em até 5 dias úteis, sites institucionais em até 10, e projetos com SEO avançado em até 15 dias — sempre depois de eu receber o conteúdo (textos e fotos) do seu negócio.</p>
+        </details>
+        <details>
+          <summary>Preciso pagar hospedagem e domínio à parte?</summary>
+          <p>Sim, hospedagem e domínio são serviços separados e de baixo custo (geralmente entre R$10 e R$40 por mês). Eu te oriento sobre as melhores opções e posso deixar tudo configurado.</p>
+        </details>
+        <details>
+          <summary>O site realmente aparece no Google?</summary>
+          <p>Todo site é entregue com estrutura de SEO (títulos, descrições, velocidade e organização de conteúdo). Aparecer bem posicionado depende também de fatores como concorrência e tempo, mas a base técnica está toda pronta desde o lançamento.</p>
+        </details>
+        <details>
+          <summary>Posso pedir alterações depois de pronto?</summary>
+          <p>Sim. Pequenos ajustes de texto e imagem após a entrega estão incluídos por um período. Alterações maiores ou novas páginas podem ser orçadas à parte.</p>
+        </details>
+        <details>
+          <summary>Como funciona o pagamento?</summary>
+          <p>Geralmente 50% no início do projeto e 50% na entrega, via Pix. Combinamos os detalhes no orçamento pelo WhatsApp.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-final">
+        <h2>Vamos colocar sua empresa no ar?</h2>
+        <p>Me chama no WhatsApp e em poucos minutos já te digo o melhor plano para o seu negócio.</p>
+        <a class="btn" href="https://wa.me/5533999744787?text=Oi%20Marlon!%20Quero%20um%20site%20para%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp agora</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Marlon Domingos — Criação de Sites. Todos os direitos reservados.</div>
+    <div>WhatsApp: (33) 99974-4787</div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5533999744787?text=Oi%20Marlon!%20Quero%20um%20site%20para%20minha%20empresa." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.647.86 5.096 2.317 7.086L4.8 28.2l6.29-1.652A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3Zm6.938 17.19c-.294.827-1.462 1.522-2.386 1.716-.634.132-1.462.238-4.246-.912-3.564-1.474-5.86-5.078-6.038-5.316-.176-.238-1.444-1.918-1.444-3.66 0-1.742.912-2.598 1.236-2.954.324-.356.706-.446.942-.446.236 0 .472.002.678.012.218.01.51-.083.798.608.294.706.998 2.44 1.086 2.618.088.178.146.386.03.624-.118.238-.176.386-.35.594-.176.208-.368.464-.526.624-.176.176-.36.368-.154.72.206.352.916 1.512 1.966 2.448 1.35 1.204 2.488 1.578 2.84 1.756.352.176.556.148.762-.09.206-.238.882-1.03 1.118-1.382.236-.352.472-.294.798-.176.324.118 2.06.972 2.414 1.148.354.176.588.264.674.412.088.148.088.856-.208 1.684Z"/></svg>
+</a>
+
+</body>
+</html>

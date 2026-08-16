@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marlondcury.github.io/sitemap.xml
