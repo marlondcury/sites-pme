@@ -179,6 +179,14 @@ nav a:hover{color:var(--text);}
 .mock-card span{display:block;height:7px;border-radius:4px;background:var(--border);margin-bottom:6px;}
 .mock-card span:last-child{width:60%;margin-bottom:0;}
 
+@media(max-width:560px){
+  .browser-mock{transform:none;}
+  .mock-cards{grid-template-columns:1fr;gap:8px;padding:0 16px 20px;}
+  .mock-nav,.mock-hero{padding-left:16px;padding-right:16px;}
+  .mock-nav .mock-links{display:none;}
+  .browser-bar .url-chip{max-width:140px;}
+}
+
 /* Portfolio */
 .portfolio-grid{
   display:grid;grid-template-columns:1fr;gap:28px;margin-top:48px;
